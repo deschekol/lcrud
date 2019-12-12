@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'StudentController@index');
+Route::get('/test', 'TestController@index');
+
+Route::get('/hello', function () {
+    return 'welcome';
+});
+
+Route::get('/user/{id}', function ($id) {
+    return 'Your Id is '.$id;
 });
